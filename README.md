@@ -1,5 +1,5 @@
 
-#   Cpanel Suspend Hosting Hosting Paketi Silicisi
+#   Cpanel Suspend Hosting Paketi Silicisi
 
 Cpanel üzerinde bir çok hosting paketi bulunmaktadır ve burada askıya alınan hosting paketlerinin toplu silinmesi ve takibi oldukça zordur özellikle whmcs gibi bir yazılım kullanmıyorsak :)
 
