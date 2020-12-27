@@ -30,7 +30,7 @@ class MainStd:
         self.sus_date  = date.fromtimestamp(self.mdate)
         self.today     = date.today()
         self.diffrent  = self.today - self.sus_date 
-        self.del_day   = argv[1] 
+        self.del_day   = (int(argv[1])) 
         self.count     = 0
     
         if self.count != (len(self.p_count)):    
@@ -45,7 +45,7 @@ class MainStd:
                     self.count+=1
                 
                   else:
-                    print(self.warn_pic+self.normal+' {'+self.user+'}'+' Kullanıcısı Suspend Edilmiş Fakat '+ self.del_day + ' Gün Olmamıştır...'+self.warn_pic)
+                    print(self.warn_pic+self.normal+' {'+self.user+'}'+' Kullanıcısı Suspend Edilmiş Fakat '+ (str(self.del_day)) + ' Gün Olmamıştır...'+self.warn_pic)
                     print(self.return_col) 
 
               break     
