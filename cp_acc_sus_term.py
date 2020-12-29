@@ -13,8 +13,6 @@ from datetime   import  date , timedelta
 from time       import  sleep
 from argparse   import  ArgumentParser , ArgumentError
 
-# Son işlem yedek almasın ama taşıma yapsın..
-
 class MainStd:
  
   def __init__(self,):
