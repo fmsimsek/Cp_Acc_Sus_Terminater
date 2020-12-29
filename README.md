@@ -1,5 +1,5 @@
 
-#   Cpanel Suspend Hosting Paketi Sonlanırıcısı
+#   Cpanel Otomatik Suspend Hosting Sonlanırıcısı
 
 Cpanel üzerinde bir çok hosting paketi bulunmaktadır ve burada askıya alınan hosting paketlerinin toplu silinmesi ve takibi oldukça zordur özellikle whmcs gibi bir yazılım kullanmıyorsak :)
 
@@ -17,24 +17,24 @@ Scrip sizden 2 adet zorunlu ve 1 adet isteğe bağlı olmak üzere 3 parametre b
 
 Kullanımı ve seneryolarını aşağıda inceleyelim.
  
- **Senaryo 1**  
+ **Senaryo 1** : 
   Buğün veya bir günden daha kısa süre içersinde olan suspend hesapları silmek ve silmeden   önce yedek almak istersek girmemiz gereken kod aşağıdaki gibidir
 
     Python2.7 cp_acc_sus_term.py --gun 0  --yedek evet
   
   Not : Yedek almak istemez iseniz -y hayır yazmanız yeterlidir.
   
-  **Senaryo 2**
+  **Senaryo 2** :
 Hosting paketi askıya alındıktan 7 gün sonra yedeği alınmadan silinsin.
 
     Python2.7 cp_acc_sus_term.py --gun 7 --yedek hayır
     
-   **Senaryo 3**
+   **Senaryo 3** :
 	Hosting paketi askıya alındıktan 5 gün sonra yedeği alınsın ve home dizini yerine yedekler benim belirteceğim dizine taşınsın.
 
     Python2.7 cp_acc_sus_term.py --gun 5 --yedek evet --yol /tmp/
     
-   **Senaryo 4**
+   **Senaryo 4** :
    Örnek olarak yukardaki senaryo işimizi görmektedir fakat bu seferde sürekli 5 günde bir scripti çalıştırmak durumuda kalacağım bunuda otomatikleştirmek istersek crontab aşağıdaki şekilde eklememiz yeterli olacaktır.
    
     * * 5  * *  /usr/bin/python2.7 /root/cp_acc_sus_term.py --gun 5 --yedek evet --yol /tmp/ 
